@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd">
+
+ <bean class = "constructorinjection.Student"  name="Stud">
+ <constructor-arg name="id"  value="101" />
+  <constructor-arg name="parents">
+  <list>
+  <value>Priya</value>
+  <value>Gayu</value>
+  <value>kavya</value>
+  </list>
+  </constructor-arg>
+
+ <constructor-arg name="phones">
+  <set>
+  <value>9876543210</value>
+  <value>9988776644</value>
+  <value>9999777755</value>
+  </set>
+ </constructor-arg>
+
+ <constructor-arg name="subject">
+  <map>
+  <entry key="Tamil" value="95"/>
+   <entry key="English" value="86"/>
+    <entry key="Maths" value="98"/>
+  </map>
+ </constructor-arg>
+
+ </bean>
+</beans>
